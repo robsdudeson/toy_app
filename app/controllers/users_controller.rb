@@ -10,7 +10,7 @@ class UsersController < ApplicationController
   # GET /users/1
   # GET /users/1.json
   def show
-    @firstPost = Micropost.find_by user_id: @user.id
+    @firstPost = (Micropost.find_by user_id: @user.id).present?
   end
 
   # GET /users/new

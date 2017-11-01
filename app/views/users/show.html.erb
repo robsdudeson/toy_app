@@ -12,7 +12,11 @@
 
 <p>
   <strong>First Post:</strong>
-  <%= @firstPost.content %>
+  <% if @firstPost %>
+    <%= @firstPost.content %>
+  <% else %>
+    nothing posted yet
+  <% end %>
 </p>
 
 <%= link_to 'Edit', edit_user_path(@user) %> |
